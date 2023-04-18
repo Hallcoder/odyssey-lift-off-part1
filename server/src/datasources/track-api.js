@@ -17,5 +17,8 @@ const { RESTDataSource}  = require("@apollo/datasource-rest");
     getTrackModules(trackId){
         return this.get(`track/${trackId}/modules`)
     }
+    incrementTrackViews(trackId){
+        return this.patch(`track/${trackId}/numberOfViews`);
+    }
 }
 module.exports = TrackAPI
